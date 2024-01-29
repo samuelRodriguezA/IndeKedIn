@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include 'bootstrap.html' %}
+  </head>
+  <body>
+    {% include 'nav.html' %}
+    <div class='container'>
+      <h1 class='text-center mt-2 mb-4'>
+        IndeKedIn Careers
+      </h1>
+      <h2 class='text-center mt-4'>Open Positions</h2> 
+      <div>
+        {% for job in jobs %}
+          {% include 'jobitem.html' %}
+        {% endfor %}
+      </div>
+      <div class='text-center'>
+        <a href="mailto:hello@indeKedIn.ai?subject=Questions%20about%20available%20positions&body=My%20name%20is%3A%0D%0AMy%20question%3A" class='btn btn-primary btn-lg'>Contact Us</a>
+      </div>
+    </div>
+    {% include 'footer.html' %}
+  </body>
+</html>

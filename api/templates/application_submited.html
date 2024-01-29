@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Application Submitted</title>
+  {% include 'bootstrap.html' %}
+  
+</head>
+<body>
+  {% include 'nav.html' %}
+    <div class='container'>
+    <h1 class='text-center mt-2 mb-4'>
+      IndeKedIn Careers
+    </h1>
+    <h4 class='text-center'>Your application for the role of {{job['title']}} at IndekedIn has been submitted.</h3>
+  <h4 class="mb-0">Full Name</h4>
+  <div class="mb-4">{{application['full_name']}}</div>
+  <h4 class="mb-0">Email</h4>
+  <div class="mb-4" >{{application['email']}}</div>
+  <h4 class="mb-0">LinkedIn URL</h4>
+  <div class="mb-4">{{application['linkedin_url']}}</div>
+  <h4 class="mb-0">GitHub URL</h4>
+  <div class="mb-4">{{application['github_url']}}</div>
+  <h4 class="mb-0">Education</h4>
+  <div class="mb-4">{{application['education']}}</div>
+  <h4 class="mb-0">Work Experience</h4>
+  <div class="mb-4">{{application['work_experience']}}</div>
+  <h4 class="mb-0">Resume URL</h4>
+  <div class="mb-4">{{application['resume_url']}}</div>
+  </div>
+   {% include 'footer.html' %}
+</body>
+</html>
